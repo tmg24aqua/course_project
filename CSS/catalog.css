@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/*header*/
+header {
+  width: 100%;
+  height: 100px;
+  flex-shrink: 0;
+  background: #fffefed2;
+  backdrop-filter:blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  width: 80px;
+  height: auto;
+  padding-left: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+ header .logo:hover{
+  transform: scale(1.1);
+ }
+
+header .navbar a {
+  margin-right: 70px;
+  color: black;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+header input {
+  display: none;
+  opacity: 0;
+  transform: scale(0)
+}
+header label {
+  font-size: large;
+  font-weight: 300;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (max-width: 778px) {
+  header{
+    background: #ffffff;
+  }
+  header .logo {
+    padding-left: 2%;
+    width: 90px;
+  }
+  header label {
+    visibility: visible;
+    opacity: 1;
+    margin-right: 30px;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #ffffff; 
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    z-index: 1001;
+    overflow: visible; 
+  }
+  header .navbar a {
+    display: block;
+    margin: 20px;
+  }
+  header .logo:hover {
+    transform: none;
+  }
+}
+
+header input:checked ~ .navbar {
+    opacity: 1;
+    transform: scale(1);
+  }
+/* header */
+
+/* catalog */
+
+
+
+/* СОРТИРОВКА */
+ .product-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+.filter-btn:hover, .sort-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.panel {
+  width: 100%;
+  margin-top: 10px;
+opacity: 0;
+display: flex;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.panel select {
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  border: 1px solid #000000;
+}
+
+.panel.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+
+
+.product-controls {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-controls button {
+  background: #faf5f5;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+/* СОРТИРОВКА */
+.sort-dropdown {
+  position: relative;
+}
+
+.panel {
+  position: absolute;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.panel.active {
+  display: flex;
+}
+
+.sort-option:hover {
+  background-color: #d2d2d2;
+}
+
+
+/* Основные стили для панели фильтров (дополнение к вашим стилям) */
+.filter-panel {
+  position: absolute;
+  top: 170px;
+  left: 50px;
+  width: 280px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 28px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  
+  /* Начальное состояние (закрыто) */
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.filter-panel.active {
+  /* Конечное состояние (открыто) */
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+
+.filter-section {
+  margin-bottom: 20px;
+}
+          
+.filter-title {         
+  font-size: 13px;          
+  font-weight: 600;         
+  color: #666666;         
+  margin-bottom: 12px;          
+  text-transform: uppercase;          
+}         
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-option {
+  padding: 6px 12px;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-option:hover {
+  background: #e9e9e9;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.filter-apply, .filter-reset {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-apply {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+.filter-apply:hover {
+  background: #e9e9e9;
+}
+
+.filter-reset {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #333333;
+}
+
+.filter-reset:hover {
+  background: #e9e9e9;
+}
+
+.filter-option.active {
+  background-color: #000000;
+  color: white;
+}
+
+.filter-option {
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+ /* Карточка */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 30px;;
+}
+
+.product-card {
+  background: #F2F2F2;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(28% - 20px);
+  min-width: 288px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Анимация */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+.foto-card{
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(28% - 20px);
+  min-width: 288px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Анимация */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.6s ease forwards;
+}
+/* Плавное появление снизу */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.product-card img:active {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.foto-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product-info {
+  padding: 15px;
+  font-family:Roboto;
+  font-size: 14px;
+  color: #333;
+}
+
+.product-info button {
+  margin-top: 10px;
+  background: #e0e0e0;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.product-info button:hover {
+  background: #ccc;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+  }
+  .foto-card{
+    width: 100%;
+    display: none;
+  }
+}
+
+/* Смена фона карточки */
+.product-card img {
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+  }
+  
+                /* Кнопка прокрутки */
+  .scroll-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #000000;
+    transform: translateY(-5px) scale(1.05);
+  }
+  
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-to-top:hover svg {
+    transform: translateY(-3px);
+  }
+  
+  /* Анимация пульсации */
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(58, 134, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(58, 134, 255, 0); }
+  }
+  
+  .scroll-to-top.pulse {
+    animation: pulse 1.5s infinite;
+  }
+
+/* footer */
+
+.copyright {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  user-select: none;
+  text-align: left;
+}
+.social-links {
+  text-align: right;
+}
+.social-icon {
+  margin-right: 3%;
+}
+
+.social-links a .social-icon{
+  transition: transform 0.2s ease;
+
+}
+.social-links a .social-icon:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 778px) {
+  .social-links a .social-icon:hover{
+    transform: none;
+  }
+     .social-links {
+      text-align: center;
+    }
+  }
