@@ -380,7 +380,7 @@ display: flex;
   }
   .foto-card{
     width: 100%;
-    display: none;
+    display: none !important;
   }
 }
 

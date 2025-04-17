@@ -30,17 +30,18 @@
         <button class="filter-btn">
           ФИЛЬТРЫ <span><img src="./img/free-icon-font-plus-3917757.svg" width="20" /></span>
         </button>
+        
         <div class="filter-panel hidden">
           <!-- Категория -->
           <div class="filter-section">
             <h3 class="filter-title">КАТЕГОРИЯ</h3>
             <div class="filter-options">
-              <button class="filter-option">ДЛЯ НОВИЧКОВ</button>
-              <button class="filter-option">ДЛЯ ДЕТЕЙ</button>
-              <button class="filter-option">ДЛЯ ПРОФЕССИОНАЛОВ</button>
-              <button class="filter-option">КАЯК</button>
-              <button class="filter-option">ТУРИСТИЧЕСКИЙ</button>
-              <button class="filter-option">ИЗ ДЕРЕВА</button>
+              <button class="filter-option" data-filter-type="category" data-filter-value="для новичков">ДЛЯ НОВИЧКОВ</button>
+              <button class="filter-option" data-filter-type="category" data-filter-value="для детей">ДЛЯ ДЕТЕЙ</button>
+              <button class="filter-option" data-filter-type="category" data-filter-value="для профессионалов">ДЛЯ ПРОФЕССИОНАЛОВ</button>
+              <button class="filter-option" data-filter-type="category" data-filter-value="каяк">КАЯК</button>
+              <button class="filter-option" data-filter-type="category" data-filter-value="туристический">ТУРИСТИЧЕСКИЙ</button>
+              <button class="filter-option" data-filter-type="category" data-filter-value="из дерева">ИЗ ДЕРЕВА</button>
             </div>
           </div>
           
@@ -48,11 +49,12 @@
           <div class="filter-section">
             <h3 class="filter-title">ОПЫТ</h3>
             <div class="filter-options">
-              <button class="filter-option">МИНИМАЛЬНЫЙ</button>
-              <button class="filter-option">СРЕДНИЙ</button>
-              <button class="filter-option">ПРОФЕССИОНАЛ</button>
+              <button class="filter-option" data-filter-type="experience" data-filter-value="минимальный">МИНИМАЛЬНЫЙ</button>
+              <button class="filter-option" data-filter-type="experience" data-filter-value="средний">СРЕДНИЙ</button>
+              <button class="filter-option" data-filter-type="experience" data-filter-value="профессионал">ПРОФЕССИОНАЛ</button>
             </div>
           </div>
+          
           <!-- Кнопки действий -->
           <div class="filter-actions">
             <button class="filter-apply">ПРИМЕНИТЬ</button>
