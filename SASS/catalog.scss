@@ -1,11 +1,11 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 /*header*/
 header {
   width: 100%;
   height: 100px;
   flex-shrink: 0;
-  background: rgba(255, 254, 254, 0.8235294118);
+  background: #fffefed2;
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -14,80 +14,90 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-}
-header .logo {
-  width: 80px;
-  height: auto;
-  padding-left: 20px;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-header .logo:hover {
-  transform: scale(1.1);
-}
-header .navbar a {
-  margin-right: 70px;
-  color: black;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  list-style: none;
-  color: #000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-header input {
-  display: none;
-  opacity: 0;
-  transform: scale(0);
-}
-header label {
-  font-size: large;
-  font-weight: 300;
-  cursor: pointer;
-  visibility: hidden;
-  opacity: 0;
-}
-@media (max-width: 778px) {
-  header {
-    background: #ffffff;
+
+  .logo {
+    width: 80px;
+    height: auto;
+    padding-left: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
-  header .logo {
-    padding-left: 2%;
-    width: 90px;
+
+  .navbar a {
+    margin-right: 70px;
+    color: black;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
-  header label {
-    visibility: visible;
-    opacity: 1;
-    margin-right: 30px;
-  }
-  header .navbar {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background: #ffffff;
+
+  input {
+    display: none;
     opacity: 0;
     transform: scale(0);
-    transform-origin: top;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    z-index: 1001;
-    overflow: visible;
   }
-  header .navbar a {
-    display: block;
-    margin: 20px;
+
+  label {
+    font-size: large;
+    font-weight: 300;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
   }
-  header .logo:hover {
-    transform: none;
+
+  @media (max-width: 778px) {
+    background: #ffffff;
+
+    .logo {
+      padding-left: 2%;
+      width: 90px;
+    }
+
+    label {
+      visibility: visible;
+      opacity: 1;
+      margin-right: 30px;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      background: #ffffff; 
+      opacity: 0;
+      transform: scale(0);
+      transform-origin: top;
+      transition: opacity 0.4s ease, transform 0.4s ease; 
+      z-index: 1001;
+      overflow: visible; 
+
+      a {
+        display: block;
+        margin: 20px;
+      }
+    }
+
+    .logo:hover {
+      transform: none;
+    }
   }
-}
-header input:checked ~ .navbar {
-  opacity: 1;
-  transform: scale(1);
+
+  input:checked ~ .navbar {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* СОРТИРОВКА */
@@ -99,21 +109,22 @@ header input:checked ~ .navbar {
   align-items: center;
   justify-content: space-between;
   padding-top: 100px;
-}
-.product-controls button {
-  background: #faf5f5;
-  border: none;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  color: #000000;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  button {
+    background: #faf5f5;
+    border: none;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
 }
 
 .filter-btn:hover, .sort-btn:hover {
@@ -129,18 +140,20 @@ header input:checked ~ .navbar {
   transform: translateY(-10px);
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-}
-.panel select {
-  padding: 10px;
-  border-radius: 10px;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  border: 1px solid #000000;
-}
-.panel.active {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
+
+  select {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    border: 1px solid #000000;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
 .product-controls {
@@ -161,9 +174,10 @@ header input:checked ~ .navbar {
   flex-direction: column;
   gap: 10px;
   z-index: 10;
-}
-.panel.active {
-  display: flex;
+
+  &.active {
+    display: flex;
+  }
 }
 
 .sort-option:hover {
@@ -181,28 +195,30 @@ header input:checked ~ .navbar {
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 100;
+  
   opacity: 0;
   transform: translateY(-10px);
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-}
-.filter-panel.active {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
 .filter-section {
   margin-bottom: 20px;
 }
 
-.filter-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: #666666;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
+.filter-title {         
+  font-size: 13px;          
+  font-weight: 600;         
+  color: #666666;         
+  margin-bottom: 12px;          
+  text-transform: uppercase;          
+}         
 
 .filter-options {
   display: flex;
@@ -219,13 +235,15 @@ header input:checked ~ .navbar {
   color: #333333;
   cursor: pointer;
   transition: all 0.2s ease;
-}
-.filter-option:hover {
-  background: #e9e9e9;
-}
-.filter-option.active {
-  background-color: #000000;
-  color: white;
+
+  &:hover {
+    background: #e9e9e9;
+  }
+
+  &.active {
+    background-color: #000000;
+    color: white;
+  }
 }
 
 .filter-actions {
@@ -248,18 +266,20 @@ header input:checked ~ .navbar {
   background: #007bff;
   color: white;
   border: none;
-}
-.filter-apply:hover {
-  background: #e9e9e9;
+
+  &:hover {
+    background: #e9e9e9;
+  }
 }
 
 .filter-reset {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   color: #333333;
-}
-.filter-reset:hover {
-  background: #e9e9e9;
+
+  &:hover {
+    background: #e9e9e9;
+  }
 }
 
 /* Карточка */
@@ -285,15 +305,17 @@ header input:checked ~ .navbar {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1.6s ease forwards;
-}
-.product-card img {
-  transition: opacity 0.4s ease;
-  cursor: pointer;
-}
-.product-card img:active {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+
+  img {
+    transition: opacity 0.4s ease;
+    cursor: pointer;
+
+    &:active {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 }
 
 .foto-card {
@@ -308,12 +330,13 @@ header input:checked ~ .navbar {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1.6s ease forwards;
-}
-.foto-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 @keyframes fadeInUp {
@@ -322,34 +345,39 @@ header input:checked ~ .navbar {
     transform: translateY(0);
   }
 }
+
 .product-info {
   padding: 15px;
   font-family: Roboto;
   font-size: 14px;
   color: #333;
-}
-.product-info button {
-  margin-top: 10px;
-  background: #e0e0e0;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.product-info button:hover {
-  background: #ccc;
+
+  button {
+    margin-top: 10px;
+    background: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #ccc;
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .product-card {
     width: 100%;
   }
+  
   .foto-card {
     width: 100%;
     display: none !important;
   }
 }
+
 /* Кнопка прокрутки */
 .scroll-to-top {
   position: fixed;
@@ -369,40 +397,40 @@ header input:checked ~ .navbar {
   transition: all 0.3s ease;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.scroll-to-top:hover {
-  background-color: #000000;
-  transform: translateY(-5px) scale(1.05);
-}
-.scroll-to-top svg {
-  width: 24px;
-  height: 24px;
-  color: white;
-  transition: transform 0.3s ease;
-}
-.scroll-to-top svg:hover {
-  transform: translateY(-3px);
-}
-.scroll-to-top.pulse {
-  animation: pulse 1.5s infinite;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    background-color: #000000;
+    transform: translateY(-5px) scale(1.05);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  &.pulse {
+    animation: pulse 1.5s infinite;
+  }
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(58, 134, 255, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(58, 134, 255, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(58, 134, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(58, 134, 255, 0); }
 }
+
 /* footer */
 .copyright {
   color: rgba(0, 0, 0, 0.5);
@@ -417,22 +445,23 @@ header input:checked ~ .navbar {
 
 .social-links {
   text-align: right;
-}
-.social-links a img {
-  width: 50px;
-}
-.social-links a .social-icon {
-  margin-right: 3%;
-  transition: transform 0.2s ease;
-}
-.social-links a .social-icon:hover {
-  transform: translateY(-5px);
-}
-@media (max-width: 778px) {
-  .social-links {
+  a img{
+    width: 50px;
+  }
+  a .social-icon {
+    margin-right: 3%;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  @media (max-width: 778px) {
     text-align: center;
+
+    a .social-icon:hover {
+      transform: none;
+    }
   }
-  .social-links a .social-icon:hover {
-    transform: none;
-  }
-}/*# sourceMappingURL=catalog.css.map */
+}

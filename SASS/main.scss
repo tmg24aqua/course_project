@@ -161,14 +161,13 @@ header {
 
     .image-section {
       flex: 1 1 320px;
-      animation: fadeInUp 1s ease forwards;
       position: relative;
       overflow: hidden;
+      
 
       .slider-arrow {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         width: 40px;
         height: 40px;
         background: rgba(0, 0, 0, 0.5);
@@ -180,7 +179,7 @@ header {
         cursor: pointer;
         z-index: 10;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.7s ease;
         font-size: 20px;
         user-select: none;
 
@@ -206,6 +205,7 @@ header {
       
       .slide {
         min-width: 100%;
+        width: 100%;
         
         img {
           width: 100%;
@@ -231,9 +231,8 @@ header {
           height: 12px;
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.5);
-          cursor: pointer;
-          transition: background 0.3s ease;
-          
+          cursor: pointer; 
+                   
           &.active {
             background: white;
           }
@@ -265,7 +264,7 @@ header {
 
   @media (max-width: 778px) {
     padding-left: 0;
-   
+  
     .image-section{
       flex-direction: column;
       width: 100%;
@@ -307,8 +306,6 @@ header {
   line-height: normal;
   user-select: none;
   text-align: left;
-  @media (max-width: 778px) {
-    text-align: center;}
 }
 
 .social-links {
