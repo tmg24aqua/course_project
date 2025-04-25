@@ -21,7 +21,7 @@ header {
   width: 100%;
   height: 100px;
   flex-shrink: 0;
-  background: #fffefed2;
+  background: #fffefe00;
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ header {
   z-index: 1000;
 
   .logo {
-    width: 80px;
+    width: 70px;
     height: auto;
     padding-left: 20px;
     flex-shrink: 0;
@@ -116,13 +116,13 @@ header {
     }
   }
 }
-
 /* body */
 .container {
   max-width: 100%;
   padding-top: 100px;
   box-sizing: border-box;
   opacity: 0;
+  padding-bottom: 100px;
 
   .sections-wrapper {
     width: 100%;
@@ -160,7 +160,7 @@ header {
     }
 
     .image-section {
-      flex: 1 1 320px;
+      flex: 1 1 325px;
       position: relative;
       overflow: hidden;
       
@@ -264,9 +264,11 @@ header {
 
   @media (max-width: 778px) {
     padding-left: 0;
-  
-    .image-section{
-      flex-direction: column;
+    .slider-arrow{
+      opacity: 1 !important;
+    }
+    .text-section , .image-section{
+      flex-direction: column ;
       width: 100%;
       height: 100%;
 

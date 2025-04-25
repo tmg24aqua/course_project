@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <id>cruiser</id>
+        <name>Cruiser 20 SUP Inflatable</name>
+        <category>для новичков</category>
+        <experience>минимальный</experience>
+        <price>765</price>
+        <image>./img/cruiser-20-sup-inflatable2 1.svg</image>
+        <hover-image>./img/Group 15.svg</hover-image>
+    </product>
+    <product>
+        <id>wildkat</id>
+        <name>Wildkat Pink</name>
+        <category>для детей</category>
+        <experience>минимальный</experience>
+        <price>1012</price>
+        <image>./img/wildkat_pink 1.svg</image>
+        <hover-image>./img/Group 16.svg</hover-image>
+    </product>
+    <product>
+        <id>red-equipment-green</id>
+        <name>Red Equipment Green</name>
+        <category>для профессионалов</category>
+        <experience>профессионал</experience>
+        <price>3200</price>
+        <image>./img/red_equpment_green 1.svg</image>
+        <hover-image>./img/Group 17.svg</hover-image>
+        </product>
+    <product>
+        <id>navigator-kayak</id>
+        <name>Navigator Inflatable Kayak</name>
+        <category>каяк</category>
+        <experience>минимальный</experience>
+        <price>2000</price>
+        <image>./img/navigator-inflatable-kayak-drop 1.svg</image>
+        <hover-image>./img/Group 18.svg</hover-image>
+    </product>
+    <product>
+        <id>explorer-kayak</id>
+        <name>Explorer Inflatable Kayak</name>
+        <category>каяк</category>
+        <experience>минимальный</experience>
+        <price>1325</price>
+        <image>./img/explorer-inflatable-kayak 1.svg</image>
+        <hover-image>./img/Group 19.svg</hover-image>
+    </product>
+    <product>
+        <id>woody-sup</id>
+        <name>Woody 20 SUP Inflatable Paddleboard</name>
+        <category>из дерева</category>
+        <experience>средний</experience>
+        <price>1003</price>
+        <image>./img/woody-20-sup-inflatable-paddleboard 1.svg</image>
+        <hover-image>./img/Group 20.svg</hover-image>
+    </product>
+    <product>
+        <id>ride-love</id>
+        <name>Ride Love</name>
+        <category>для новичков</category>
+        <experience>минимальный</experience>
+        <price>2290</price>
+        <image>./img/Ride Love.svg</image>
+        <hover-image>./img/Group 21.svg</hover-image>
+    </product>
+    <product>
+        <id>tourer-sup</id>
+        <name>Tourer 20 SUP Inflatable Paddleboard</name>
+        <category>для новичков</category>
+        <experience>минимальный</experience>
+        <price>1003</price>
+        <image>./img/tourer-20-sup-inflatable-paddleboard-103113ft-white-wave-sups 1.svg</image>
+        <hover-image>./img/Group 22.svg</hover-image>
+    </product>
+    <product>
+        <id>sport-se-msl</id>
+        <name>Sport SE MSL</name>
+        <category>для профессионалов</category>
+        <experience>профессионал</experience>
+        <price>2552</price>
+        <image>./img/Sport-SE-MSL.svg</image>
+        <hover-image>./img/Group 23.svg</hover-image>
+    </product>
+    <product>
+        <id>compact-plp</id>
+        <name>Compact PLP</name>
+        <category>туристический</category>
+        <experience>средний</experience>
+        <price>3800</price>
+        <image>./img/Compact PLP.svg</image>
+        <hover-image>./img/Group 26.svg</hover-image>
+    </product>
+    <product>
+        <id>windsurf-msl</id>
+        <name>Windsurf MSL Inflatable Paddle Board</name>
+        <category>туристический</category>
+        <experience>средний</experience>
+        <price>2941</price>
+        <image>./img/Windsurf MSL Inflatable Paddle Board.svg</image>
+        <hover-image>./img/Group 24.svg</hover-image>
+    </product>
+    <product>
+        <id>activ-msl</id>
+        <name>Activ MSL Inflatable Paddle Board</name>
+        <category>туристический</category>
+        <experience>средний</experience>
+        <price>2123</price>
+        <image>./img/2023-108-Activ-MSL-Inflatable-Paddle-Board-Package-Red-Paddle-Co-1 1.svg</image>
+        <hover-image>./img/Group 25.svg</hover-image>
+    </product>
+</products>

@@ -20,7 +20,7 @@ header {
   width: 100%;
   height: 100px;
   flex-shrink: 0;
-  background: rgba(255, 254, 254, 0.8235294118);
+  background: rgba(255, 254, 254, 0);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -31,7 +31,7 @@ header {
   z-index: 1000;
 }
 header .logo {
-  width: 80px;
+  width: 70px;
   height: auto;
   padding-left: 20px;
   flex-shrink: 0;
@@ -112,6 +112,7 @@ header input:checked ~ .navbar {
   padding-top: 100px;
   box-sizing: border-box;
   opacity: 0;
+  padding-bottom: 100px;
 }
 .container .sections-wrapper {
   width: 100%;
@@ -146,7 +147,7 @@ header input:checked ~ .navbar {
   animation: fadeInUp 1s ease forwards;
 }
 .container .sections-wrapper .image-section {
-  flex: 1 1 320px;
+  flex: 1 1 325px;
   position: relative;
   overflow: hidden;
 }
@@ -236,18 +237,21 @@ header input:checked ~ .navbar {
   .container {
     padding-left: 0;
   }
-  .container .image-section {
+  .container .slider-arrow {
+    opacity: 1 !important;
+  }
+  .container .text-section, .container .image-section {
     flex-direction: column;
     width: 100%;
     height: 100%;
   }
-  .container .image-section .text-section {
+  .container .text-section .text-section, .container .image-section .text-section {
     padding: 0;
   }
-  .container .image-section .text-section h2 {
+  .container .text-section .text-section h2, .container .image-section .text-section h2 {
     font-size: 4.2vw;
   }
-  .container .image-section .features-list li {
+  .container .text-section .features-list li, .container .image-section .features-list li {
     font-size: 4vw;
   }
   .container .equipment-button {
