@@ -306,6 +306,7 @@ body {
 @media (max-width: 768px) {
   .container {
     padding: 15px;
+    padding-top: 70px;
   }
   .container .section-title,
   .container .contact-title {

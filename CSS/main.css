@@ -233,6 +233,11 @@ header input:checked ~ .navbar {
 .container .equipment-button:active {
   transform: scale(0.95);
 }
+@media (max-width: 1024px) {
+  .container {
+    padding: 30% 0;
+  }
+}
 @media (max-width: 778px) {
   .container {
     padding-left: 0;

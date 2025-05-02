@@ -65,19 +65,18 @@ const initCart = () => {
             <div class="cart-item-info">
               <h3 class="cart-item-title">${product.name}</h3>
               <div class="cart-item-details">
-           <span class="cart-item-category"><strong>Категория:</strong> ${product.category}</span>
-            <span class="cart-item-experience"><strong>Опыт:</strong> ${product.experience}</span>
+                <span class="cart-item-category"><strong>Категория:</strong> ${product.category}</span>
+                <span class="cart-item-experience"><strong>Опыт:</strong> ${product.experience}</span>
               </div>
             </div>
             <div class="cart-item-controls">
               <button class="cart-item-decrease">-</button>
               <span class="cart-item-quantity">${cartItem.quantity}</span>
               <button class="cart-item-increase">+</button>
-            <div class="cart-item-price">${itemTotal} BYN</div>
-            <button class="cart-item-remove">&times;</button>
+              <div class="cart-item-price">${itemTotal} BYN</div>
+              <button class="cart-item-remove">&times;</button>
+            </div>
           </div>
-          </div>
-
         `;
       }
     });
@@ -161,19 +160,68 @@ const initCart = () => {
     }
     return five;
   };
-  
-  // Обработчик кнопки оформления заказа
-  document.getElementById('checkout-btn')?.addEventListener('click', () => {
-    alert('Заказ оформлен!');
-    localStorage.removeItem('cart');
-    renderCart();
-    updateCartCounter();
-  });
+
+  // Инициализация модальных окон
+  const initModals = () => {
+    const checkoutBtn = document.getElementById('checkout-btn');
+    const orderModal = document.getElementById('order-modal');
+    const successModal = document.getElementById('success-modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+    const closeSuccessBtn = document.querySelector('.close-success-btn');
+    const orderForm = document.getElementById('order-form');
+
+    // Открытие модального окна заказа
+    checkoutBtn.addEventListener('click', function() {
+      if (getCart().length === 0) {
+        alert('Корзина пуста');
+        return;
+      }
+      orderModal.classList.add('active');
+    });
+
+    // Закрытие модальных окон
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        orderModal.classList.remove('active');
+        successModal.classList.remove('active');
+      });
+    });
+
+    closeSuccessBtn.addEventListener('click', function() {
+      successModal.classList.remove('active');
+    });
+
+    // Закрытие по клику вне модального окна
+    window.addEventListener('click', function(event) {
+      if (event.target === orderModal) {
+        orderModal.classList.remove('active');
+      }
+      if (event.target === successModal) {
+        successModal.classList.remove('active');
+      }
+    });
+
+    // Обработка отправки формы
+    orderForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Здесь можно добавить отправку данных на сервер
+      // Пока просто показываем окно успеха
+      orderModal.classList.remove('active');
+      successModal.classList.add('active');
+      
+      // Очищаем корзину после успешного оформления
+      localStorage.removeItem('cart');
+      renderCart();
+      updateCartCounter();
+    });
+  };
   
   // Инициализация
   loadProductsData().then(() => {
     renderCart();
     updateCartCounter();
+    initModals();
   });
 };
 
