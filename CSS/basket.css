@@ -316,6 +316,7 @@ body .modal .modal-content {
   padding: 30px;
   border-radius: 12px;
   width: 90%;
+  height: 90%;
   max-width: 500px;
   position: relative;
   transform: translateY(-20px);
@@ -412,7 +413,9 @@ body #success-modal .modal-content .close-success-btn:hover {
 @media (max-width: 768px) {
   body .modal .modal-content {
     width: 95%;
-    padding: 20px;
+    height: 70%;
+    padding: 50px;
+    margin: 10px;
   }
   body .modal .modal-content h2 {
     font-size: 20px;

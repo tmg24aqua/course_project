@@ -348,6 +348,7 @@ body {
     padding: 30px;
     border-radius: 12px;
     width: 90%;
+    height: 90%;
     max-width: 500px;
     position: relative;
     transform: translateY(-20px);
@@ -467,7 +468,9 @@ body {
   .modal {
     .modal-content {
       width: 95%;
-      padding: 20px;
+      height: 70%;
+      padding: 50px;
+      margin: 10px;
 
       h2 {
         font-size: 20px;
