@@ -62,7 +62,7 @@ const initFilters = () => {
 
   if (!filterBtn || !filterPanel) return;
 
-  // 🔧 Не даём событиям всплывать из панели — предотвращаем закрытие
+
   filterPanel.addEventListener('click', e => e.stopPropagation());
 
   const filterOptions = document.querySelectorAll('.filter-option');
@@ -184,7 +184,7 @@ const initFilters = () => {
     filterPanel.classList.remove('active');
   };
 
-  // Инициализация
+ 
   loadFilters();
   filterBtn.addEventListener('click', toggleFilterPanel);
   filterOptions.forEach(option => {
@@ -278,7 +278,6 @@ const initFilters = () => {
     });
   };
   // Каталог
-  // ========== Корзина (упрощенная версия для каталога) ==========
 const initCart = () => {
   // Обработчик добавления в корзину
   document.querySelectorAll('.add-to-cart').forEach(btn => {

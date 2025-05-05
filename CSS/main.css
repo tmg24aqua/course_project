@@ -1,20 +1,4 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-/* Анимация для всех элементов */
-.container {
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /*header*/
 header {
   width: 100%;
@@ -107,6 +91,20 @@ header input:checked ~ .navbar {
 }
 
 /* body */
+.container {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .container {
   max-width: 100%;
   padding-top: 100px;
