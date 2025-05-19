@@ -65,7 +65,6 @@
         initEvents();
         startAutoScroll();
 
-   x
     };
 
     document.addEventListener('DOMContentLoaded', initSlider);
