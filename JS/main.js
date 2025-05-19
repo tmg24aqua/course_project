@@ -65,9 +65,7 @@
         initEvents();
         startAutoScroll();
 
-        return () => {
-            clearInterval(autoScrollInterval);
-        };
+   x
     };
 
     document.addEventListener('DOMContentLoaded', initSlider);
