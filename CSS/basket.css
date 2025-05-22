@@ -311,12 +311,6 @@ body .modal.active {
   align-items: center;
   animation: fadeIn 0.3s ease forwards;
 }
-body .modal.closing {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeOut 0.3s ease forwards;
-}
 body .modal .modal-content {
   background: #ffffff;
   padding: 30px;
@@ -327,9 +321,6 @@ body .modal .modal-content {
   transform: translateY(-20px);
   opacity: 0;
   animation: fadeInUp 0.3s ease forwards 0.2s;
-}
-body .modal .modal-content.closing {
-  animation: fadeOutDown 0.3s ease forwards;
 }
 body .modal .modal-content h2 {
   font-size: 24px;
@@ -416,24 +407,6 @@ body #success-modal .modal-content .close-success-btn:hover {
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes fadeOutDown {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(20px);
   }
 }
 @media (max-width: 768px) {
